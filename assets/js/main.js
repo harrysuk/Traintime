@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('#newTrain').click(function(){
 		var trainName = $('#trainName-input').val().trim();
 		var destination = $('#destination-input').val().trim();
-		var startTime = moment($('#startTime-input').val().trim(), 'HH:mm').subtract(10,'years').format('X');
+		var startTime = moment($('#startTime-input').val().trim(), 'HH:mm').format('X');
         var frequency = $('#frequency-input').val();
         
         var newTrain = {
