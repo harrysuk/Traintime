@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Times</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+        <div class="container">	
+                <div class="row">
+                    <div class="jumbotron header">
+                        <h1 class="text-center">Train Schedule</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-heading bg-info text-white col-md-12">
+                            <h4 class="col-md-6" id="icon"><i class = "fas fa-train fa-lg"></i>    Train Times</h4>
+                            <h4 class="col-md-6" id="clock"><span id = "actualTime"></span></h4>
+                        </div>
+                        <div class="card-body">
+                <table class="table table-bordered thead-dark">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min.)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "schedule"> </tbody>
+                </table>			
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="newTrainInput col-md-6">
+                        <div class="card">
+                                <div class="card-heading bg-info text-white col-md-12">
+                                        <h4 class="col-md-6" id="icon"><i class = "fa fa-train fa-lg"></i> Add New Train </h4>								
+                                        <h4 id = "add"><i id = "symbol" class = "fa fa-plus fa-lg"></i></h4>
+                                </div>
+    <div class="card-body" id="newTrainSchedule" data-status = "hide" > 	
+        
+                            <div role="form" class="form-group">
+                                    
+                            <label for="Search">Train Name:</label>
+                            <input type="text" class="form-control" id="trainName-input" placeholder="" required>
+                                    
+                            <label for="Destination">Destination:</label>
+                            <input type="text" class="form-control" id="destination-input">
+                        
+                            <label for="Start Time">First Train Arrival: <span id= timeFormat>(Time Format HH:MM)</span></label>
+                            <input type="text" class="form-control" id="startTime-input" >
+                        
+                            <label for="Frequency">Frequency (in Minutes):</label>
+                            <input type="number" class="form-control" id="frequency-input">
+                                            
+                            <button class="btn btn-primary" id="newTrain"></i>Submit</button>
+                                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!-- Firebase Reference -->
+ <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+ 
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>  
+ <!-- javascript file -->
+ <script src="assets/js/main.js" type="text/javascript"></script>
+</body>
+</html>
