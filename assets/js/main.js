@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 
     // Initialize Firebase
     var config = {
@@ -12,7 +12,10 @@ $(document).ready(function() {
 
     firebase.initializeApp(config);
 
-    var trainData = firebase.database();
+
+    const trainData = firebase.database();
+
+    $(document).ready(function() {
 
     $('#newTrain').click(function(){
 		var trainName = $('#trainName-input').val().trim();

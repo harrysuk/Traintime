@@ -23,14 +23,14 @@
                             <h4 class="col-md-6" id="clock"><span id = "actualTime"></span></h4>
                         </div>
                         <div class="card-body">
-                <table class="table table-bordered thead-dark">
+                <table class="table thead-dark">
                     <thead>
                         <tr>
-                            <th>Train Name</th>
-                            <th>Destination</th>
-                            <th>Frequency</th>
-                            <th>Next Arrival</th>
-                            <th>Minutes Away</th>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
                         </tr>
                     </thead>
                     <tbody id = "schedule"> </tbody>
@@ -48,7 +48,7 @@
                                         <h4 class="col-md-6" id="icon"><i class = "fa fa-train fa-lg"></i> Add New Train </h4>								
                                         <h4 id = "add"><i id = "symbol" class = "fa fa-plus fa-lg"></i></h4>
                                 </div>
-    <div class="card-body" id="newTrainSchedule" data-status = "hide" > 	
+    <div class="card-body" id="newTrainSchedule"> 	
         
                             <div role="form" class="form-group">
                                     
@@ -58,7 +58,7 @@
                             <label for="Destination">Destination:</label>
                             <input type="text" class="form-control" id="destination-input">
                         
-                            <label for="Start Time">First Train Arrival: <span id= timeFormat>(Time Format HH:MM)</span></label>
+                            <label for="Start Time">First Train Arrival: <span id= timeFormat>(Format HH:MM)</span></label>
                             <input type="text" class="form-control" id="startTime-input" >
                         
                             <label for="Frequency">Frequency (in Minutes):</label>
@@ -72,13 +72,14 @@
                     </div>
                 </div>
             </div>
- <!-- Firebase Reference -->
- <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+
  <!-- jQuery -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
  <!-- moments for time -->
  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>  
- <!-- javascript file -->
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  <!-- javascript file -->
  <script src="assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>
